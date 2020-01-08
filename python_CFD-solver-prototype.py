@@ -200,8 +200,8 @@ def lid_driven_boundaries():
             vel[0][a] = [0,0]
             vel[grid_height+1][a] = [0,0]
 
-        for a in range(1,grid_len+1):
-            vel[grid_height][a] = [2,0]
+        for a in range(2,grid_len+1):
+            vel[grid_height][a] = [0.1,0]
 
 
         for a in range(grid_height+2):
@@ -331,7 +331,7 @@ def iteration():
         sor_iteration()
     update_velocities()
 
-for a in tqdm(range(1000)):
+for a in tqdm(range(50)):
     iteration()
 
 show_graph()
